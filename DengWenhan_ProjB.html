@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ControlMulti</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL  -->
+	<style>
+		body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+		</style>
+	<body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width="500" height="500">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<p>
+	<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look inside main(), inside its 'tick()' function, where we
+		 display the 'current angle' value.
+	-->
+	<!-- Next, make a simple block of text 
+	-->
+	<!-- Next, make an HTML 'input' box element, a text-box 10 chars wide where users
+		can type in text.  Give it an ID name so that our JavaScript program
+		(e.g. ControlMulti.js, loaded near the end of this file) can access this
+		HTML element by name in the 'tick' function.
+	-->
+	<b>Welcome to the Funny camera project!</b> 
+	<p><b> Following are the operations this project supports </b></p>
+	<p> Press W A S D to change the looking position of the camera (The location of the camera would stay the same).</p>
+	<p> Press the arrow keys to freely move the camera in the space.</p>
+	<p> Press P to change the spinning pattern of the gems tower and the space station.</p>
+	<p> Use your mouse to interact with the accumulated spheres.</p>
+
+	<!--  Mouse click/drag amounts.  Look in 'console' for event reports;
+			the 'clear' button calls Javascript function 'clearDrag()'
+			whose sole purpose is to set global vars xMdragTot,yMdragTot ==0.0
+		  Note we use these totals to rotate the triangle at upper left.
+	-->
+		
+		
+	<p>
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+		When users click the button, HTML calls JavaScript functions
+			"spinDown()", "runStop()" and "spinUp()"   -->
+   
+
+   
+    </p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="DengWenhan_ProjB.js"></script>
+  </body>
+</html>
